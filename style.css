@@ -1,0 +1,233 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: rgb(31, 31, 31);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    font-size: 20px;
+    color: rgb(252, 252, 252);
+    font-weight: 500;
+    position: relative;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+}
+
+.mainimg {
+    margin-top: 80px; 
+}
+
+.mainimg img {
+    width: 100%;
+    opacity: 50%;
+}
+
+.about {
+    margin-top: 10%;
+    padding: 0 5%;
+}
+
+.about h1 {
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.about p {
+    color: #bbbbbb;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px 5%;
+}
+
+.menu-section {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.menu-section h1 {
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    margin-top: 5%;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.gallery-container img {
+    width: 100%;
+    max-width: 200px; 
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #0000009d;
+    transition: transform .6s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.03);
+}
+
+.map {
+    width: 100%;
+    text-align: center;
+    padding: 50px 5%;
+}
+
+.map iframe {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.map h1, .map h3 {
+    color: #fff;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(15, 15, 15);
+    padding: 20px;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    color: #fff;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.icons a {
+    font-size: 28px;
+    color: #d6d6d6;
+    margin: 0 20px; 
+    transition: all .4s ease;
+}
+
+.icons a:hover {
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: fixed;
+        top: 80px;
+        right: 0;
+        background-color: rgb(31, 31, 31);
+        width: 200px;
+        padding: 20px;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mainimg img {
+        height: auto;
+    }
+
+    .gallery-container {
+        flex-direction: column;
+    }
+
+    .gallery-container img {
+        max-width: 100%;
+    }
+
+    .map iframe {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 20px 10px;
+    }
+
+    .footer-logo img {
+        width: 100px;
+    }
+}
