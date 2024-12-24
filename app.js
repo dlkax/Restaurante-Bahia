@@ -35,3 +35,5 @@ hamburger.addEventListener('click', toggleMenu);
 menuLinks.forEach((link) => {
     link.addEventListener("click", scrollToSection);
 });
+
+document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
