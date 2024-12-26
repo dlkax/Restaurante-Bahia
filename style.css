@@ -125,7 +125,7 @@ body {
 .gallery-container img {
     width: 100%;
     max-width: 200px; 
-    height: auto;
+    height: 150px;
     border-radius: 20px;
     box-shadow: 0 0 30px #0000009d;
     transition: transform .6s;
